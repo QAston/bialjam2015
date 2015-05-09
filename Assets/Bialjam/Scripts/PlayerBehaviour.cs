@@ -9,7 +9,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		POSSESSING,
 	}
 	
-	public void KillCharacter() {
+	public void DieCharacter() {
 
 	}
 
