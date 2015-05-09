@@ -69,10 +69,14 @@ public class CharacterBehaviour : MonoBehaviour {
 		// Set the vertical animation
 		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
-	
+
+	public void Fly(float vert, float hor) {
+		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
+	}
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
+		Debug.Log (gameObject.name);
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{

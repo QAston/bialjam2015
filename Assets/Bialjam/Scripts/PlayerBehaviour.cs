@@ -4,10 +4,14 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerBehaviour : MonoBehaviour {
 
-	enum State {
+	public enum State {
 		ALIVE,
 		GHOST,
 		POSSESSING,
+	}
+
+	public State GetState() {
+		return currentState;
 	}
 
 	private State currentState;
@@ -17,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	public void DieCharacter() {
 		if (currentState != State.GHOST) {
+			currentState = State.GHOST;
 			GameObject ghost = (GameObject)Instantiate(ghostToSpawn, transform.position, transform.rotation);
 			possessedCharacterBehavior.Die();
 			initPossess(ghost);
@@ -32,8 +37,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void initPossess(GameObject character)
 	{
+		if (possessedCharacter != null)
+			possessedCharacter.transform.SetParent(null);
 		possessedCharacter = character;
 		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
+		possessedCharacter.transform.SetParent(this.gameObject.transform.parent);
 	}
 	
 	private GameObject possessedCharacter;
@@ -46,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void Start() {
 		currentState = State.ALIVE;
-		possessedCharacter = startCharacter;
+		initPossess(startCharacter);
 	}
 
 	public void Revive() {
@@ -58,7 +66,6 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (possessedCharacter == null) {
 			Start();
 		}
-		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 	}
 	
 	
@@ -70,21 +77,25 @@ public class PlayerBehaviour : MonoBehaviour {
 			m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 		}
 	}
-	
+
 	
 	private void FixedUpdate()
 	{
-		// Read the inputs.
-		bool crouch = Input.GetKey(KeyCode.LeftControl);
-		float h = CrossPlatformInputManager.GetAxis("Horizontal");
-		// Pass all parameters to the character control script.
-		possessedCharacterBehavior.Move(h, crouch, m_Jump);
-		m_Jump = false;
-		transform.position = possessedCharacter.transform.position;
+		if (GetState () != State.GHOST) {
+			// Read the inputs.
+			bool crouch = Input.GetKey (KeyCode.LeftControl);
+			float h = CrossPlatformInputManager.GetAxis ("Horizontal");
+			// Pass all parameters to the character control script.
+			possessedCharacterBehavior.Move (h, crouch, m_Jump);
+			m_Jump = false;
+			transform.position = possessedCharacter.transform.position;
+		} else {
+			possessedCharacterBehavior.Fly(CrossPlatformInputManager.GetAxis ("Horizontal"), CrossPlatformInputManager.GetAxis ("Vertical"));
+		}
 	}
 
 	public static PlayerBehaviour GetForCharater (GameObject character) {
-		return character ? character.transform.parent.GetComponentInChildren<PlayerBehaviour>() : null;
+		return (character != null && character.transform.parent != null) ? character.transform.parent.GetComponentInChildren<PlayerBehaviour>() : null;
 	}
 	
 }
