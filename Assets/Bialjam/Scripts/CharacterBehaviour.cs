@@ -76,7 +76,6 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
-		Debug.Log (gameObject.name);
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
