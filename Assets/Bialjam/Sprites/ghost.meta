@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Bialjam/Sprites/ghost.meta
 guid: 8c5aefe16332ee543a7493bf11f3203e
 folderAsset: yes
 timeCreated: 1431168722
+=======
+guid: 14cf8a0f3452d4340b8db41d5451a276
+folderAsset: yes
+timeCreated: 1431168765
+>>>>>>> fbe63c0fcb4738b63fc4cd55374acea49b08a6cc:Assets/Bialjam/Sprites/ghost.meta
 licenseType: Free
 DefaultImporter:
   userData: 

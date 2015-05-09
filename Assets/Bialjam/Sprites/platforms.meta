@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Bialjam/Sprites/platforms.meta
 guid: 7efbd9a2b8d5de748b9f3f0a4670645c
 folderAsset: yes
 timeCreated: 1431168722
+=======
+guid: 70448a5a419563c419217665f8dddfc1
+folderAsset: yes
+timeCreated: 1431168765
+>>>>>>> fbe63c0fcb4738b63fc4cd55374acea49b08a6cc:Assets/Bialjam/Sprites/platforms.meta
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -12,6 +12,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private State currentState;
 
+	public GameObject startCharacter;
+
 	public void DieCharacter() {
 
 	}
@@ -33,6 +35,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	void Start() {
 		currentState = State.ALIVE;
+		possessedCharacter = startCharacter;
 	}
 
 	public void Revive() {
