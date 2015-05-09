@@ -10,6 +10,9 @@ TagManager:
   - Enemy
   - Scenery
   - Damager
+  - Entrance
+  - Exit
+  - Player
   layers:
   - Default
   - TransparentFX
@@ -19,14 +22,14 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Enemy
-  - Bullet (Player)
-  - Bullet (Enemy)
-  - DestoyArea
-  - Scenery
-  - Columns
-  - 
+  - Alive Player
+  - Ghost Player
+  - Character
+  - Level
+  - Alive Level
+  - Ghost Level
+  - Alive Background
+  - Ghost Background
   - 
   - 
   - 
