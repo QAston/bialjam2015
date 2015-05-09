@@ -33,7 +33,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		return possessedCharacter;
 	}
 
-	void Start() {
+	private void Start() {
 		currentState = State.ALIVE;
 		possessedCharacter = startCharacter;
 	}
@@ -44,7 +44,10 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	private void Awake()
 	{
-		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
+		if (possessedCharacter == null) {
+			Start();
+		}
+		possessedCharacterBehavior = startCharacter.GetComponent<CharacterBehaviour>();
 	}
 	
 	
