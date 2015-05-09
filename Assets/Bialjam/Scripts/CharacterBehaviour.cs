@@ -22,6 +22,12 @@ public class CharacterBehaviour : MonoBehaviour {
 
 	public void Die() {
 		IsAlive = false;
+		m_Anim.enabled = false;
+		m_Rigidbody2D.velocity = new Vector2 (0, 0);
+	}
+
+	public void Revive() {
+		IsAlive = true;
 	}
 	
 	private void Awake()
