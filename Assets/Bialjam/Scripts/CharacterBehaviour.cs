@@ -4,6 +4,23 @@ using System.Collections;
 public class CharacterBehaviour : MonoBehaviour {
 
 	public bool IsAlive;
+
+	public enum Type
+	{
+		PLAYER,
+		GHOST,
+		NPC
+	}
+
+	public Type GetType() {
+		if (gameObject.name == "PlayerCharacter")
+			return Type.PLAYER;
+		if (gameObject.tag == "GhostCharacter")
+			return Type.GHOST;
+		if (gameObject.tag == "GhostCharacter")
+			return Type.NPC;
+		throw new System.Exception ("invalid type");
+	}
 	
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
 	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -59,7 +76,9 @@ public class CharacterBehaviour : MonoBehaviour {
 
 		if (m_Grounded) {
 			if (Mathf.Abs(transform.position.y - lastGroundedPostion) > m_MaxFallHeight) {
-				Die ();
+				PlayerBehaviour p = PlayerBehaviour.GetForCharater(this.gameObject);
+				if (p != null)
+					p.DieCharacter ();
 			}
 			lastGroundedPostion = transform.position.y;
 		}
@@ -76,7 +95,6 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
-		Debug.Log (gameObject.name);
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
