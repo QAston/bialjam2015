@@ -17,7 +17,7 @@ public class CharacterBehaviour : MonoBehaviour {
 			return Type.PLAYER;
 		if (gameObject.tag == "GhostCharacter")
 			return Type.GHOST;
-		if (gameObject.tag == "GhostCharacter")
+		if (gameObject.tag == "NpcCharacter")
 			return Type.NPC;
 		throw new System.Exception ("invalid type");
 	}
@@ -89,6 +89,24 @@ public class CharacterBehaviour : MonoBehaviour {
 		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
 
+	
+	public void OnCollisionEnter2D(Collision2D col) {
+		if (GetType () == Type.NPC) {
+			var npc = this;
+			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
+			if (p != null)
+			{
+				var ghost = col.gameObject.GetComponent<CharacterBehaviour>();
+				if (ghost != null && ghost.GetType() == Type.GHOST)
+				{
+					p.Possess(npc.gameObject);
+					Destroy(ghost.gameObject);
+				}
+			}
+
+		}
+	}
+
 	public void Fly(float vert, float hor) {
 		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
 	}
@@ -142,7 +160,6 @@ public class CharacterBehaviour : MonoBehaviour {
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
-	
 	
 	private void Flip()
 	{

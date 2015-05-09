@@ -13,6 +13,8 @@ TagManager:
   - Entrance
   - Exit
   - Player
+  - GhostCharacter
+  - NpcCharacter
   layers:
   - Default
   - TransparentFX
