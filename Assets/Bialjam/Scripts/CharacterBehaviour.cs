@@ -114,7 +114,10 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
-					p.Possess(player.gameObject);
+					//Debug.Log (m_Anim.GetBool("Reanim"));
+					m_Anim.SetTrigger("Reanim");
+					Debug.Log (m_Anim.GetInteger("Reanim"));
+					//p.Possess(player.gameObject);
 				}
 			}
 		}
@@ -123,11 +126,11 @@ public class CharacterBehaviour : MonoBehaviour {
 	public void Fly(float vert, float hor) {
 		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
 	}
-	
-	public void Move(float move, bool crouch, bool jump)
-	{
-		Debug.Log ("MOVE");
-		Debug.Log (GetType ());
+
+	public void Move(float move, bool crouch, bool jump) 
+	{ 
+		if (m_Anim.GetBool("Reanim"))
+			return;
 		m_Grounded = true;
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
