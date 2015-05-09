@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
 public class RandomEnable : MonoBehaviour {
 	private List<GameObject> objects;
 	public float switchTime = 5.0f;

@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.922254562, y: -.355100155, z: -15.25}
+  m_LocalPosition: {x: -.992254615, y: -.355100155, z: -15.25}
   m_LocalScale: {x: .756634355, y: .529643416, z: .756634176}
   m_Children: []
   m_Father: {fileID: 493310}
@@ -109,8 +109,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4000001, y: 2.72000003, z: 15.25}
-  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
+  m_LocalPosition: {x: 9.98999977, y: -.819999993, z: 15.25}
+  m_LocalScale: {x: .400000006, y: .300000012, z: 1}
   m_Children:
   - {fileID: 471094}
   - {fileID: 477994}
@@ -178,7 +178,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 926194697
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 635c991d9d73e6841b9500c1914e0fc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -204,7 +204,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 926194697
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 884cf0e52ea7c384b8d14883b3143459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -230,7 +230,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 926194697
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 884cf0e52ea7c384b8d14883b3143459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
