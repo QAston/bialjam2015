@@ -29,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	}
 
 	public void Possess(GameObject character){
+		currentState = State.POSSESSING;
 		initPossess(character);
 	}
 
@@ -57,8 +58,9 @@ public class PlayerBehaviour : MonoBehaviour {
 		initPossess(startCharacter);
 	}
 
-	public void Revive() {
+	public void Revive(GameObject player) {
 		currentState = State.ALIVE;
+		initPossess(player);
 	}
 	
 	private void Awake()
