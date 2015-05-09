@@ -9,6 +9,8 @@ public class CurrentLevel : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentLevelText = GetComponent<Text> ();
-		currentLevelText.text = "Level " + Application.loadedLevelName;
+		if (currentLevelText != null) {
+			currentLevelText.text = "Level " + Application.loadedLevelName;
+		}
 	}
 }
