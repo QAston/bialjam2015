@@ -13,16 +13,27 @@ public class PlayerBehaviour : MonoBehaviour {
 	private State currentState;
 
 	public GameObject startCharacter;
+	public GameObject ghostToSpawn;
 
 	public void DieCharacter() {
-
+		if (currentState != State.GHOST) {
+			GameObject ghost = (GameObject)Instantiate(ghostToSpawn, transform.position, transform.rotation);
+			possessedCharacterBehavior.Die();
+			initPossess(ghost);
+		}
 	}
 
 	public void Possess(GameObject character){
-		possessedCharacter = character;
+		initPossess(character);
 	}
 
 	void Restart() {
+	}
+
+	private void initPossess(GameObject character)
+	{
+		possessedCharacter = character;
+		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 	}
 	
 	private GameObject possessedCharacter;
@@ -47,7 +58,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (possessedCharacter == null) {
 			Start();
 		}
-		possessedCharacterBehavior = startCharacter.GetComponent<CharacterBehaviour>();
+		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 	}
 	
 	
@@ -71,5 +82,10 @@ public class PlayerBehaviour : MonoBehaviour {
 		m_Jump = false;
 		transform.position = possessedCharacter.transform.position;
 	}
+
+	public static PlayerBehaviour GetForCharater (GameObject character) {
+		return character ? character.transform.parent.GetComponentInChildren<PlayerBehaviour>() : null;
+	}
+	
 }
 
