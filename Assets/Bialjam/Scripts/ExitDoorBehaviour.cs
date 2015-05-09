@@ -5,7 +5,7 @@ public class ExitDoorBehaviour : MonoBehaviour {
 
 	public int targetLevel;
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if (other.name == "Player") {
 			Application.LoadLevel (targetLevel);
 		}
