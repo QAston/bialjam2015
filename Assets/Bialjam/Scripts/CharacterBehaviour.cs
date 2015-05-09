@@ -91,6 +91,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
 	
 	public void OnCollisionEnter2D(Collision2D col) {
+		// jako duch zderzamy się z npc
 		if (GetType () == Type.NPC) {
 			var npc = this;
 			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
@@ -103,7 +104,19 @@ public class CharacterBehaviour : MonoBehaviour {
 					Destroy(ghost.gameObject);
 				}
 			}
-
+		}
+		// jako npc zderzamy się z graczem
+		else if (GetType () == Type.PLAYER) {
+			var player = this;
+			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
+			if (p != null)
+			{
+				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
+				if (npc != null && npc.GetType() == Type.NPC)
+				{
+					p.Possess(player.gameObject);
+				}
+			}
 		}
 	}
 
@@ -113,6 +126,9 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
+		Debug.Log ("MOVE");
+		Debug.Log (GetType ());
+		m_Grounded = true;
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
