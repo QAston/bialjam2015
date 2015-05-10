@@ -10,6 +10,6 @@ public class BlackHoleRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		transform.Rotate(0, 4 * Time.deltaTime, 0);
+		transform.Rotate(0, 0, 4 * Time.deltaTime);
 	}
 }

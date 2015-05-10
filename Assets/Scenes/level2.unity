@@ -239,7 +239,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 437194, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.78999996
       objectReference: {fileID: 0}
     - target: {fileID: 437194, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -271,11 +271,70 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_ForceMagnitude
-      value: -10
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860492, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Radius
+      value: 5.57000017
+      objectReference: {fileID: 0}
+    - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Drag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 21231924, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &169965859 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 105694, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+  m_PrefabInternal: {fileID: 146229101}
+--- !u!95 &169965860
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169965859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b584a13a7b25de44484c9ac1c591c1fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &169965861
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169965859}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 926194697
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ddf994589185e174fb1d08935fc12977, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &263960369
 Prefab:
   m_ObjectHideFlags: 0
@@ -811,7 +870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 437194, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.94000006
+      value: 7.94999981
       objectReference: {fileID: 0}
     - target: {fileID: 437194, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -839,7 +898,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
       propertyPath: m_ForceMagnitude
-      value: -10
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860492, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Radius
+      value: 4.96999979
+      objectReference: {fileID: 0}
+    - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Drag
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
