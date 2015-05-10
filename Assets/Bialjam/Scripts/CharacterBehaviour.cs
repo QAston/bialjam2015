@@ -41,14 +41,19 @@ public class CharacterBehaviour : MonoBehaviour {
 	public bool blockMovement = false;
 
 	public void Die() {
-		IsAlive = false;
-		m_Anim.enabled = false;
-		m_Rigidbody2D.velocity = new Vector2 (0, 0);
+		if (IsAlive) {
+			IsAlive = false;
+			m_Anim.SetBool ("IsAlive", false);
+			m_Rigidbody2D.velocity = new Vector2 (0, 0);
+		}
 	}
 
 	public void Revive() {
-		IsAlive = true;
-		m_Anim.enabled = true;
+		if (!IsAlive) {
+			IsAlive = true;
+			m_Anim.SetBool ("IsAlive", true);
+			m_Anim.enabled = true;
+		}
 	}
 	
 	private void Awake()
