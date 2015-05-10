@@ -326,6 +326,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_ForceMagnitude
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 25016750, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
+      propertyPath: m_Drag
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e678f1eefe1b73442b9066c52fc92ed9, type: 2}
   m_IsPrefabParent: 0
@@ -470,7 +478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459018, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 21253576, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
       propertyPath: m_SortingLayerID
