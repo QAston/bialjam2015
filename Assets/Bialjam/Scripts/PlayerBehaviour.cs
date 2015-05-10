@@ -87,13 +87,15 @@ public class PlayerBehaviour : MonoBehaviour {
 			// Read the inputs.
 			bool crouch = Input.GetKey (KeyCode.LeftControl);
 			float h = CrossPlatformInputManager.GetAxis ("Horizontal");
+			if (m_Jump)
+				Debug.Log("JUMP");
 			// Pass all parameters to the character control script.
 			possessedCharacterBehavior.Move (h, crouch, m_Jump);
-			m_Jump = false;
-			transform.position = possessedCharacter.transform.position;
 		} else {
 			possessedCharacterBehavior.Fly(CrossPlatformInputManager.GetAxis ("Horizontal"), CrossPlatformInputManager.GetAxis ("Vertical"));
 		}
+		m_Jump = false;
+		transform.position = possessedCharacter.transform.position;
 	}
 
 	public static PlayerBehaviour GetForCharater (GameObject character) {
