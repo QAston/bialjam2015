@@ -41,7 +41,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	public bool blockMovement = false;
 
 	public void Die() {
-		IsAlive = false;m_Grounded
+		IsAlive = false;
 		m_Anim.enabled = false;
 		m_Rigidbody2D.velocity = new Vector2 (0, 0);
 	}
@@ -63,7 +63,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	
 	private void FixedUpdate()
-	{m_Grounded
+	{
 		m_Grounded = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
