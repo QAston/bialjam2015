@@ -38,6 +38,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private float lastGroundedPostion = 0f;
+	public bool blockMovement = false;
 
 	public void Die() {
 		IsAlive = false;
@@ -89,7 +90,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
 		m_Anim.SetBool("Ground", m_Grounded);
 		
-		// Set the vertical animation
+		// Set the vertical animationm_Grounded
 		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
 
@@ -118,18 +119,28 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
-					p.Revive(player.gameObject);
+					npc.GetComponent<Animator>().SetTrigger("Reanim");
+					npc.blockMovement = true;
 				}
 			}
 		}
 	}
 
+	public void StopVelocity() {
+		m_Rigidbody2D.velocity = new Vector2 (0.0f, m_Rigidbody2D.velocity.y);
+	}
+
 	public void Fly(float vert, float hor) {
 		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
 	}
-	
-	public void Move(float move, bool crouch, bool jump)
+
+	public void Move(float move, bool crouch, bool jump) 
 	{
+		if (blockMovement)
+			return;
+		
+		m_Grounded = true;
+
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
@@ -168,14 +179,16 @@ public class CharacterBehaviour : MonoBehaviour {
 				Flip();
 			}
 		}
+
 		// If the player should jump...
 		if (m_Grounded && jump && m_Anim.GetBool("Ground"))
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
-			m_Anim.SetBool("Ground", false);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
+
+		m_Anim.SetBool ("Ground", m_Grounded);
 	}
 	
 	private void Flip()
