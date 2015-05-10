@@ -49,11 +49,8 @@ public class CharacterBehaviour : MonoBehaviour {
 	}
 
 	public void Revive() {
-		if (!IsAlive) {
-			IsAlive = true;
-			m_Anim.SetBool ("IsAlive", true);
-			m_Anim.enabled = true;
-		}
+		IsAlive = true;
+		m_Anim.SetBool ("IsAlive", true);
 	}
 	
 	private void Awake()
