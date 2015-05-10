@@ -26,6 +26,7 @@ public class Fading : MonoBehaviour {
 	// sets fadeDir to the direction parameter making the scene fade in if -1 and out if 1
 	public float BeginFade (int direction)
 	{
+		alpha = 1;
 		fadeDir = direction;
 		return (fadeSpeed);
 	}

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.ImageEffects;
 
+[RequireComponent (typeof (Fading))]
 public class PlayerBehaviour : MonoBehaviour {
 
 	public enum State {
@@ -19,6 +20,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	public GameObject startCharacter;
 	public GameObject ghostToSpawn;
+
+	private Fading fade;
 
 	public void DieCharacter() {
 		if (currentState != State.GHOST) {
@@ -39,6 +42,9 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void initPossess(GameObject character)
 	{
+		if (fade != null) {
+			fade.BeginFade (-1);
+		}
 		if (possessedCharacter != null) {
 			possessedCharacter.GetComponent<SpriteRenderer> ().sortingOrder = 1;
 			possessedCharacter.transform.SetParent (null);
@@ -96,6 +102,10 @@ public class PlayerBehaviour : MonoBehaviour {
 	
 	private void Awake()
 	{
+		GameObject fadeObject = GameObject.Find ("Fade");
+		if (fadeObject != null) {
+			fade = fadeObject.GetComponent<Fading> ();
+		}
 		if (possessedCharacter == null) {
 			Start();
 		}
