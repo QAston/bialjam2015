@@ -185,10 +185,11 @@ public class CharacterBehaviour : MonoBehaviour {
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+			m_Anim.SetBool ("Ground", false);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 
-		m_Anim.SetBool ("Ground", m_Grounded);
+
 	}
 	
 	private void Flip()
