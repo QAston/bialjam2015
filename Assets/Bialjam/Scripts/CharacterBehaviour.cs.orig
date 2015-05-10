@@ -41,7 +41,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	public bool blockMovement = false;
 
 	public void Die() {
-		IsAlive = false;m_Grounded
+		IsAlive = false;
 		m_Anim.enabled = false;
 		m_Rigidbody2D.velocity = new Vector2 (0, 0);
 	}
@@ -63,7 +63,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	
 	private void FixedUpdate()
-	{m_Grounded
+	{
 		m_Grounded = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
@@ -90,7 +90,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
 		m_Anim.SetBool("Ground", m_Grounded);
 		
-		// Set the vertical animationm_Grounded
+		// Set the vertical animation
 		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
 
@@ -119,8 +119,12 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
+<<<<<<< HEAD
 					npc.GetComponent<Animator>().SetTrigger("Reanim");
 					npc.blockMovement = true;
+=======
+					p.Revive(player.gameObject);
+>>>>>>> d20268bd776ec51d709b748662ee5081d56c6754
 				}
 			}
 		}

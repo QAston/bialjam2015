@@ -38,11 +38,17 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void initPossess(GameObject character)
 	{
+<<<<<<< HEAD
 		if (possessedCharacter != null) {
 			possessedCharacter.GetComponent<SpriteRenderer> ().sortingOrder = 1;
 			possessedCharacter.transform.SetParent (null);
 		}
 		character.GetComponent<SpriteRenderer> ().sortingOrder = 2; // bring to front
+=======
+		if (possessedCharacter != null)
+			possessedCharacter.transform.SetParent(null);
+
+>>>>>>> d20268bd776ec51d709b748662ee5081d56c6754
 		possessedCharacter = character;
 		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 		possessedCharacter.transform.SetParent(this.gameObject.transform.parent);
