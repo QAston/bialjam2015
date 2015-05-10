@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.790000021, z: 0}
   m_LocalScale: {x: .233688712, y: .233688727, z: .233688727}
   m_Children:
   - {fileID: 466260}
@@ -124,7 +124,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .620000005, y: 2.46000004, z: 0}
+  m_LocalPosition: {x: .620000005, y: 5.36000013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405712}
@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.1000004, y: 13, z: 0}
+  m_LocalPosition: {x: -8.47000027, y: 13.3699999, z: 0}
   m_LocalScale: {x: 2.94483042, y: 2.94483066, z: 2.94483066}
   m_Children:
   - {fileID: 405712}
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.75999999, z: 0}
+  m_LocalPosition: {x: 0, y: .0199999996, z: 0}
   m_LocalScale: {x: .564482868, y: .564483702, z: 1}
   m_Children: []
   m_Father: {fileID: 405712}
@@ -237,7 +237,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .280000001, y: -1.87}
+  m_Offset: {x: .0399999991, y: .879999995}
   serializedVersion: 2
   m_Radius: .930000007
 --- !u!61 &6125792
@@ -250,9 +250,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .360000014, y: .589999974}
+  m_Offset: {x: .129999995, y: 3.4000001}
   serializedVersion: 2
-  m_Size: {x: 1.58000004, y: 4.13000011}
+  m_Size: {x: 1.75999999, y: 4.13999987}
 --- !u!81 &8142046
 AudioListener:
   m_ObjectHideFlags: 1
@@ -278,7 +278,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 933eea77358cdc746befe53921e4610e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
