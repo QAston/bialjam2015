@@ -54,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.5900002, y: 2.18000007, z: 29}
-  m_LocalScale: {x: 2.40013576, y: 2.40013313, z: 2.40013313}
+  m_LocalPosition: {x: 9.46000004, y: 4.57000017, z: 29}
+  m_LocalScale: {x: 1.49353325, y: 1.49353361, z: 1.49353361}
   m_Children:
   - {fileID: 403108}
   m_Father: {fileID: 0}
@@ -72,7 +72,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .649999976
 --- !u!58 &5860492
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -85,7 +85,7 @@ CircleCollider2D:
   m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.6400001
+  m_Radius: 2.79999995
 --- !u!114 &11435140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,8 +121,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 926194697
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d235556d311cd497b993de7aa11961d4, type: 3}
-  m_Color: {r: .0278231706, g: .00491998764, b: .669117689, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ddf994589185e174fb1d08935fc12977, type: 3}
+  m_Color: {r: .760784388, g: .760784388, b: .760784388, a: 1}
 --- !u!250 &25016750
 PointEffector2D:
   m_ObjectHideFlags: 1
@@ -133,10 +133,10 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 512
-  m_ForceMagnitude: -90
+  m_ForceMagnitude: -25
   m_ForceVariation: 0
   m_DistanceScale: .5
-  m_Drag: 30
+  m_Drag: 10
   m_AngularDrag: 0
   m_ForceSource: 1
   m_ForceTarget: 0
