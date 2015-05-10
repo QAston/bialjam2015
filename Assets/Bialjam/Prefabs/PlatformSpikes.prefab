@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 445500}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 405066}
   - 212: {fileID: 21252426}
   - 61: {fileID: 6168472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 212: {fileID: 21290880}
   - 114: {fileID: 11491810}
   - 61: {fileID: 6129364}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

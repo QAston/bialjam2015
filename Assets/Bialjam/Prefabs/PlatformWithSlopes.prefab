@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 424910}
   - 212: {fileID: 21260248}
   - 61: {fileID: 6116060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 434042}
   - 212: {fileID: 21228326}
   - 61: {fileID: 6107164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 431938}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformWithSlopes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 418114}
   - 212: {fileID: 21228778}
   - 61: {fileID: 6159480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,9 +84,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110148}
-  m_LocalRotation: {x: -.0087265363, y: -.999961913, z: -1.42173329e-09, w: -1.62914475e-07}
-  m_LocalPosition: {x: -21.6000004, y: -.400000006, z: 0}
-  m_LocalScale: {x: .756634414, y: .529643416, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 7.54979013e-08}
+  m_LocalPosition: {x: -21.9300003, y: -.349999994, z: 0}
+  m_LocalScale: {x: .75709331, y: .529964507, z: 1.0006063}
   m_Children: []
   m_Father: {fileID: 431938}
   m_RootOrder: 2
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.0999985, y: -8.77000046, z: 15.25}
+  m_LocalPosition: {x: 20.5, y: -1.70000005, z: 15.3000002}
   m_LocalScale: {x: 1.04176199, y: .762712002, z: 1.22656834}
   m_Children:
   - {fileID: 434042}
@@ -127,9 +127,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -2.86102295e-06, y: 2.07955217}
+  m_Offset: {x: -2.86102295e-06, y: 1.51848984}
   serializedVersion: 2
-  m_Size: {x: 19.1900005, y: 4.6908865}
+  m_Size: {x: 19.1900005, y: 3.56875706}
 --- !u!61 &6116060
 BoxCollider2D:
   m_ObjectHideFlags: 1

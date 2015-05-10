@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21215376}
   - 114: {fileID: 11437712}
   - 61: {fileID: 6110774}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

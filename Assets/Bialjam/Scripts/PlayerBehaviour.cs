@@ -56,8 +56,12 @@ public class PlayerBehaviour : MonoBehaviour {
 	private void Start() {
 		currentState = State.ALIVE;
 		initPossess(startCharacter);
+		// init min position
+		bounds = new Bounds(Vector3.zero, Vector3.zero);
+		foreach (Renderer r in FindObjectsOfType(typeof(Renderer)))
+			bounds.Encapsulate(r.bounds);
 	}
-
+	
 	public void Revive(GameObject player) {
 		currentState = State.ALIVE;
 		initPossess(player);
@@ -87,18 +91,25 @@ public class PlayerBehaviour : MonoBehaviour {
 			// Read the inputs.
 			bool crouch = Input.GetKey (KeyCode.LeftControl);
 			float h = CrossPlatformInputManager.GetAxis ("Horizontal");
+
 			// Pass all parameters to the character control script.
 			possessedCharacterBehavior.Move (h, crouch, m_Jump);
-			m_Jump = false;
-			transform.position = possessedCharacter.transform.position;
 		} else {
 			possessedCharacterBehavior.Fly(CrossPlatformInputManager.GetAxis ("Horizontal"), CrossPlatformInputManager.GetAxis ("Vertical"));
+		}
+		m_Jump = false;
+		transform.position = possessedCharacter.transform.position;
+
+		// check if within map
+		if (!bounds.Contains(transform.position)) {
+			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
 
 	public static PlayerBehaviour GetForCharater (GameObject character) {
 		return (character != null && character.transform.parent != null) ? character.transform.parent.GetComponentInChildren<PlayerBehaviour>() : null;
 	}
-	
+
+	private Bounds bounds;
 }
 

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterBehaviour : MonoBehaviour {
 
-	public bool IsAlive;
+	private bool IsAlive = true;
 
 	public enum Type
 	{
@@ -47,6 +47,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
 	public void Revive() {
 		IsAlive = true;
+		m_Anim.enabled = true;
 	}
 	
 	private void Awake()
@@ -77,8 +78,11 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (m_Grounded) {
 			if (Mathf.Abs(transform.position.y - lastGroundedPostion) > m_MaxFallHeight) {
 				PlayerBehaviour p = PlayerBehaviour.GetForCharater(this.gameObject);
+				// kill player if availabe, just play anim otherwise.
 				if (p != null)
 					p.DieCharacter ();
+				else
+					this.Die ();
 			}
 			lastGroundedPostion = transform.position.y;
 		}
@@ -95,7 +99,7 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (GetType () == Type.NPC) {
 			var npc = this;
 			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
-			if (p != null)
+			if (p != null && npc.IsAlive)
 			{
 				var ghost = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (ghost != null && ghost.GetType() == Type.GHOST)
@@ -114,7 +118,7 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
-					p.Possess(player.gameObject);
+					p.Revive(player.gameObject);
 				}
 			}
 		}
@@ -126,9 +130,6 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
-		Debug.Log ("MOVE");
-		Debug.Log (GetType ());
-		m_Grounded = true;
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{

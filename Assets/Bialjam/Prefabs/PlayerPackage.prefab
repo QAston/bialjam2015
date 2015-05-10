@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5052874}
   - 61: {fileID: 6125792}
   - 114: {fileID: 11448428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 466260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 107786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .233688712, y: .233688727, z: .233688727}
   m_Children:
   - {fileID: 466260}
   - {fileID: 415708}
@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .360000014, z: 0}
+  m_LocalPosition: {x: .620000005, y: 2.46000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405712}
@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.30900002, y: 8.51430035, z: 0}
+  m_LocalPosition: {x: 5.27642632, y: 4.92906094, z: 0}
   m_LocalScale: {x: 2.94483042, y: 2.94483066, z: 2.94483066}
   m_Children:
   - {fileID: 405712}
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.603473186, z: 0}
+  m_LocalPosition: {x: 0, y: -2.75999999, z: 0}
   m_LocalScale: {x: .564482868, y: .564483702, z: 1}
   m_Children: []
   m_Father: {fileID: 405712}
@@ -199,7 +199,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.98521996
+  orthographic size: 10.1213455
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -236,9 +236,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.449999988}
+  m_Offset: {x: .280000001, y: -1.87}
   serializedVersion: 2
-  m_Radius: .159999996
+  m_Radius: .930000007
 --- !u!61 &6125792
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -249,9 +249,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .360000014, y: .589999974}
   serializedVersion: 2
-  m_Size: {x: .25, y: .680000007}
+  m_Size: {x: 1.58000004, y: 4.13000011}
 --- !u!81 &8142046
 AudioListener:
   m_ObjectHideFlags: 1
@@ -275,7 +275,7 @@ Animator:
   m_GameObject: {fileID: 107786}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5fc43f0c4b413534ba12c51c0e5e5f6f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 933eea77358cdc746befe53921e4610e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -294,14 +294,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8782369a05f7b854eb57eb4d0c337aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAlive: 0
   m_MaxSpeed: 10
   m_JumpForce: 400
   m_CrouchSpeed: .360000014
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294942207
 --- !u!114 &11485156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,10 +313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 487250}
-  damping: 1
-  lookAheadFactor: 2
+  damping: .100000001
+  lookAheadFactor: 1
   lookAheadReturnSpeed: .5
-  lookAheadMoveThreshold: .100000001
+  lookAheadMoveThreshold: .300000012
 --- !u!114 &11499282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,9 +359,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1783731295
+  m_SortingLayerID: 926194697
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b6d2bfa2a0d08945affc3f0b026c899, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
