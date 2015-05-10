@@ -140,9 +140,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .708244145, y: 1.65397727}
+  m_Offset: {x: .456278831, y: .811085641}
   serializedVersion: 2
-  m_Size: {x: 2.96434069, y: 9.29272938}
+  m_Size: {x: 3.46832252, y: 7.18550014}
 --- !u!61 &6159480
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -153,9 +153,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .475626886, y: 1.58319819}
+  m_Offset: {x: -.0516815633, y: .821767449}
   serializedVersion: 2
-  m_Size: {x: 3.41874552, y: 9.16347504}
+  m_Size: {x: 2.36412907, y: 7.21891069}
 --- !u!212 &21228326
 SpriteRenderer:
   m_ObjectHideFlags: 1
