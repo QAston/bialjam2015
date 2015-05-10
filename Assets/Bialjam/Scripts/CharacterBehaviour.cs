@@ -115,7 +115,7 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
-					p.Possess(player.gameObject);
+					p.Revive(player.gameObject);
 				}
 			}
 		}
