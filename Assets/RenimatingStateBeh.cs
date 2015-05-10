@@ -21,8 +21,8 @@ public class RenimatingStateBeh : StateMachineBehaviour {
 		behaviour.blockMovement = false;
 		PlayerBehaviour p = PlayerBehaviour.GetForCharater(animator.gameObject);
 		var player = GameObject.Find ("PlayerCharacter");
-		var characterBehaviour = player.GetComponent<CharacterBehaviour> ();
-		characterBehaviour.Revive ();
+		var characterBehaviour = player.GetComponent<Behaviour> ();
+		p.Revive(characterBehaviour.gameObject);
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
