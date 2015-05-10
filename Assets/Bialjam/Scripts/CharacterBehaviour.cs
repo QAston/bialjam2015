@@ -78,8 +78,11 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (m_Grounded) {
 			if (Mathf.Abs(transform.position.y - lastGroundedPostion) > m_MaxFallHeight) {
 				PlayerBehaviour p = PlayerBehaviour.GetForCharater(this.gameObject);
+				// kill player if availabe, just play anim otherwise.
 				if (p != null)
 					p.DieCharacter ();
+				else
+					this.Die ();
 			}
 			lastGroundedPostion = transform.position.y;
 		}
