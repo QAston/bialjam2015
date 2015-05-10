@@ -260,10 +260,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2046876, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
-      propertyPath: orthographic size
-      value: 10.3800001
-      objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 21253576, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
       propertyPath: m_Sprite
       value: 
@@ -316,6 +313,11 @@ Prefab:
     - target: {fileID: 21253576, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
       propertyPath: m_SortingLayerID
       value: 926194697
+=======
+    - target: {fileID: 2046876, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}
+      propertyPath: orthographic size
+      value: 10.3800001
+>>>>>>> states
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03e05b6072c6d554f84f655a26987b44, type: 2}

@@ -127,12 +127,18 @@ public class CharacterBehaviour : MonoBehaviour {
 	public void Fly(float vert, float hor) {
 		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
 	}
+<<<<<<< HEAD
+	
+	public void Move(float move, bool crouch, bool jump)
+	{
+=======
 
 	public void Move(float move, bool crouch, bool jump) 
 	{ 
 		if (m_Anim.GetBool("Reanim"))
 			return;
 		m_Grounded = true;
+>>>>>>> states
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
