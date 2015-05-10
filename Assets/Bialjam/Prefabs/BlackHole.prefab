@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 403108}
   - 58: {fileID: 5841986}
   - 114: {fileID: 11435140}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Kernel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 212: {fileID: 21231924}
   - 58: {fileID: 5860492}
   - 250: {fileID: 25016750}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BlackHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 926194697
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d235556d311cd497b993de7aa11961d4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .0278231706, g: .00491998764, b: .669117689, a: 1}
 --- !u!250 &25016750
 PointEffector2D:
   m_ObjectHideFlags: 1
@@ -132,7 +132,7 @@ PointEffector2D:
   m_Enabled: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   m_ForceMagnitude: -90
   m_ForceVariation: 0
   m_DistanceScale: .5
