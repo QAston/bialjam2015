@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.ImageEffects;
 
 public class PlayerBehaviour : MonoBehaviour {
 
@@ -38,9 +39,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void initPossess(GameObject character)
 	{
-		if (possessedCharacter != null)
-			possessedCharacter.transform.SetParent(null);
-
+		if (possessedCharacter != null) {
+			possessedCharacter.GetComponent<SpriteRenderer> ().sortingOrder = 1;
+			possessedCharacter.transform.SetParent (null);
+		}
+		character.GetComponent<SpriteRenderer> ().sortingOrder = 2; // bring to front
 		possessedCharacter = character;
 		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 		possessedCharacter.transform.SetParent(this.gameObject.transform.parent);
@@ -51,15 +54,18 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (camera != null) {
 
 			var camComponent = camera.GetComponent<Camera>();
+			var colorComponent = camera.GetComponent<ColorCorrectionCurves>();
 			switch (possessedCharacterBehavior.GetType ()) {
 			case CharacterBehaviour.Type.PLAYER:
 			case CharacterBehaviour.Type.NPC:
 				camComponent.cullingMask |= aliveMask;
 				camComponent.cullingMask &= ~ghostMask;
+				colorComponent.enabled = false;
 				break;
 			case CharacterBehaviour.Type.GHOST:
 				camComponent.cullingMask |= ghostMask;
 				camComponent.cullingMask &= ~aliveMask;
+				colorComponent.enabled = true;
 				break;
 			}
 
