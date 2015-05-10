@@ -21,7 +21,7 @@ public class RenimatingStateBeh : StateMachineBehaviour {
 		behaviour.blockMovement = false;
 		PlayerBehaviour p = PlayerBehaviour.GetForCharater(animator.gameObject);
 		var player = GameObject.Find ("PlayerCharacter");
-		var characterBehaviour = player.GetComponent<Behaviour> ();
+		var characterBehaviour = player.GetComponent<CharacterBehaviour> ();
 		p.Revive(characterBehaviour.gameObject);
 	}
 
