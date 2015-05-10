@@ -35,7 +35,7 @@ AnimatorController:
   - m_Name: AliveState
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: 2
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
@@ -61,6 +61,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bb2056efcea35043978e4723a7a40f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11412624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e708ba56a1d7014bb33894040b07bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11454242
@@ -411,9 +422,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsAlive
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: AliveState
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110259500}
   m_Solo: 0
@@ -434,8 +445,8 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsAlive
+  - m_ConditionMode: 6
+    m_ConditionEvent: AliveState
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110235288}
@@ -828,7 +839,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: ab7943bbee5ba674c9c17af5d7855102, type: 2}
   m_Tag: 
 --- !u!1102 &110235288
 AnimatorState:
@@ -876,12 +887,13 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Alive
+  m_Name: Reviving
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110108528}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11412624}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

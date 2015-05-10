@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GameObject 4
+  m_Name: GameObject 1
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110795360}
+    m_StateMachine: {fileID: 110744446}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -22,13 +22,13 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 0}
   m_MultiThreadedStateMachine: 1
---- !u!1102 &110296374
+--- !u!1102 &110259630
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: dead
+  m_Name: robot_death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -37,9 +37,9 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: ab7943bbee5ba674c9c17af5d7855102, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0feda97edb123224e8b268021dece63e, type: 2}
   m_Tag: 
---- !u!1107 &110795360
+--- !u!1107 &110744446
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -48,18 +48,15 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110296374}
+    m_State: {fileID: 110259630}
     m_Position: {x: 200, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
-  m_StateMachineTransitions:
-    data:
-      first: {fileID: 110795360}
-      second: []
+  m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110296374}
+  m_DefaultState: {fileID: 110259630}
