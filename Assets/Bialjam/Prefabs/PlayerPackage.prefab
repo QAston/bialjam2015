@@ -199,7 +199,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.98521996
+  orthographic size: 10.1213455
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -294,7 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8782369a05f7b854eb57eb4d0c337aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAlive: 0
   m_MaxSpeed: 10
   m_JumpForce: 400
   m_CrouchSpeed: .360000014
@@ -314,10 +313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 487250}
-  damping: 1
-  lookAheadFactor: 2
+  damping: .100000001
+  lookAheadFactor: 1
   lookAheadReturnSpeed: .5
-  lookAheadMoveThreshold: .100000001
+  lookAheadMoveThreshold: .300000012
 --- !u!114 &11499282
 MonoBehaviour:
   m_ObjectHideFlags: 1
