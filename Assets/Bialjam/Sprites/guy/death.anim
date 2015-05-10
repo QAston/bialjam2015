@@ -15,15 +15,50 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves: []
-  m_SampleRate: 60
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: d25c67dd0bdc8bc41abf447713748183, type: 3}
+    - time: .125
+      value: {fileID: 21300000, guid: 46ef770af7c54e249ac246e1d537899b, type: 3}
+    - time: .25
+      value: {fileID: 21300000, guid: 5764941b54d43ca4ca5abb9c1fcc3de0, type: 3}
+    - time: .375
+      value: {fileID: 21300000, guid: 14f677d972f68e040b8f51383901571e, type: 3}
+    - time: .5
+      value: {fileID: 21300000, guid: b149c69ddac5d14468f51fefe29aa3d1, type: 3}
+    - time: .625
+      value: {fileID: 21300000, guid: f26ceb38f5e98bc408a04458842ebe7a, type: 3}
+    - time: .75
+      value: {fileID: 21300000, guid: dbb47b525e9efd94fa24b8c863355423, type: 3}
+    - time: .875
+      value: {fileID: 21300000, guid: 19c0ad04d864d644d9e58af6c46f268d, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - path: 0
+      attribute: 0
+      script: {fileID: 0}
+      classID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: d25c67dd0bdc8bc41abf447713748183, type: 3}
+    - {fileID: 21300000, guid: 46ef770af7c54e249ac246e1d537899b, type: 3}
+    - {fileID: 21300000, guid: 5764941b54d43ca4ca5abb9c1fcc3de0, type: 3}
+    - {fileID: 21300000, guid: 14f677d972f68e040b8f51383901571e, type: 3}
+    - {fileID: 21300000, guid: b149c69ddac5d14468f51fefe29aa3d1, type: 3}
+    - {fileID: 21300000, guid: f26ceb38f5e98bc408a04458842ebe7a, type: 3}
+    - {fileID: 21300000, guid: dbb47b525e9efd94fa24b8c863355423, type: 3}
+    - {fileID: 21300000, guid: 19c0ad04d864d644d9e58af6c46f268d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
@@ -31,7 +66,7 @@ AnimationClip:
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
