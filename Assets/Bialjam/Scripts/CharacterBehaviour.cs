@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterBehaviour : MonoBehaviour {
 
-	public bool IsAlive;
+	private bool IsAlive = true;
 
 	public enum Type
 	{
