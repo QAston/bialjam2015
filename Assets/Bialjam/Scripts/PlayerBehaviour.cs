@@ -40,9 +40,30 @@ public class PlayerBehaviour : MonoBehaviour {
 	{
 		if (possessedCharacter != null)
 			possessedCharacter.transform.SetParent(null);
+
 		possessedCharacter = character;
 		possessedCharacterBehavior = possessedCharacter.GetComponent<CharacterBehaviour>();
 		possessedCharacter.transform.SetParent(this.gameObject.transform.parent);
+
+		var camera = GameObject.Find ("PlayerCamera");
+		var ghostMask = LayerMask.GetMask ("Ghost Level", "Ghost Background", "Ghost Player");
+		var aliveMask = LayerMask.GetMask ("Alive Level", "Alive Background");
+		if (camera != null) {
+
+			var camComponent = camera.GetComponent<Camera>();
+			switch (possessedCharacterBehavior.GetType ()) {
+			case CharacterBehaviour.Type.PLAYER:
+			case CharacterBehaviour.Type.NPC:
+				camComponent.cullingMask |= aliveMask;
+				camComponent.cullingMask &= ~ghostMask;
+				break;
+			case CharacterBehaviour.Type.GHOST:
+				camComponent.cullingMask |= ghostMask;
+				camComponent.cullingMask &= ~aliveMask;
+				break;
+			}
+
+		}
 	}
 	
 	private GameObject possessedCharacter;
