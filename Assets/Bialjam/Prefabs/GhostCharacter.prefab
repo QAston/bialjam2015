@@ -95,8 +95,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118060}
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: .100000001
+  m_LinearDrag: 10
   m_AngularDrag: .0500000007
   m_GravityScale: 3
   m_FixedAngle: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8704
 --- !u!212 &21221198
 SpriteRenderer:
   m_ObjectHideFlags: 1
