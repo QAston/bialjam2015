@@ -87,6 +87,8 @@ public class PlayerBehaviour : MonoBehaviour {
 			// Read the inputs.
 			bool crouch = Input.GetKey (KeyCode.LeftControl);
 			float h = CrossPlatformInputManager.GetAxis ("Horizontal");
+			if (m_Jump)
+				Debug.Log("JUMP");
 			// Pass all parameters to the character control script.
 			possessedCharacterBehavior.Move (h, crouch, m_Jump);
 		} else {

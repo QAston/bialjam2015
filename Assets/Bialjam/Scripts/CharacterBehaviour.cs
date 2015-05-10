@@ -47,6 +47,7 @@ public class CharacterBehaviour : MonoBehaviour {
 
 	public void Revive() {
 		IsAlive = true;
+		m_Anim.enabled = true;
 	}
 	
 	private void Awake()
@@ -126,9 +127,6 @@ public class CharacterBehaviour : MonoBehaviour {
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
-		Debug.Log ("MOVE");
-		Debug.Log (GetType ());
-		m_Grounded = true;
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
