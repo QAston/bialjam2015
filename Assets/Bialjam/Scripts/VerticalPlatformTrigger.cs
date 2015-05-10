@@ -17,7 +17,6 @@ public class VerticalPlatformTrigger : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter2D(Collision2D col) {
-
 		if(!trigger){
 			obj.GetComponent<Animator>().Play ("PlatformVerticalAnimation");
 			trigger = !trigger;

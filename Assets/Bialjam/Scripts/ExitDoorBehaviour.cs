@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ExitDoorBehaviour : MonoBehaviour {
 
-	public int targetLevel;
+	public string targetLevel;
 
 	void OnTriggerEnter2D(Collider2D other) {
 		var player = PlayerBehaviour.GetForCharater(other.gameObject);

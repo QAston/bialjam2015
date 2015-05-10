@@ -38,6 +38,7 @@ public class CharacterBehaviour : MonoBehaviour {
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private float lastGroundedPostion = 0f;
+	public bool blockMovement = false;
 
 	public void Die() {
 		IsAlive = false;
@@ -78,8 +79,11 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (m_Grounded) {
 			if (Mathf.Abs(transform.position.y - lastGroundedPostion) > m_MaxFallHeight) {
 				PlayerBehaviour p = PlayerBehaviour.GetForCharater(this.gameObject);
+				// kill player if availabe, just play anim otherwise.
 				if (p != null)
 					p.DieCharacter ();
+				else
+					this.Die ();
 			}
 			lastGroundedPostion = transform.position.y;
 		}
@@ -96,7 +100,7 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (GetType () == Type.NPC) {
 			var npc = this;
 			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
-			if (p != null)
+			if (p != null && npc.IsAlive)
 			{
 				var ghost = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (ghost != null && ghost.GetType() == Type.GHOST)
@@ -115,30 +119,32 @@ public class CharacterBehaviour : MonoBehaviour {
 				var npc = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (npc != null && npc.GetType() == Type.NPC)
 				{
-					//Debug.Log (m_Anim.GetBool("Reanim"));
-					m_Anim.SetTrigger("Reanim");
-					Debug.Log (m_Anim.GetInteger("Reanim"));
-					//p.Possess(player.gameObject);
+<<<<<<< HEAD
+					npc.GetComponent<Animator>().SetTrigger("Reanim");
+					npc.blockMovement = true;
+=======
+					p.Revive(player.gameObject);
+>>>>>>> d20268bd776ec51d709b748662ee5081d56c6754
 				}
 			}
 		}
 	}
 
+	public void StopVelocity() {
+		m_Rigidbody2D.velocity = new Vector2 (0.0f, m_Rigidbody2D.velocity.y);
+	}
+
 	public void Fly(float vert, float hor) {
 		m_Rigidbody2D.velocity = new Vector2(vert*m_MaxSpeed/2, hor*m_MaxSpeed/2);
 	}
-<<<<<<< HEAD
-	
-	public void Move(float move, bool crouch, bool jump)
-	{
-=======
 
 	public void Move(float move, bool crouch, bool jump) 
-	{ 
-		if (m_Anim.GetBool("Reanim"))
+	{
+		if (blockMovement)
 			return;
+		
 		m_Grounded = true;
->>>>>>> states
+
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
@@ -177,14 +183,16 @@ public class CharacterBehaviour : MonoBehaviour {
 				Flip();
 			}
 		}
+
 		// If the player should jump...
 		if (m_Grounded && jump && m_Anim.GetBool("Ground"))
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
-			m_Anim.SetBool("Ground", false);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
+
+		m_Anim.SetBool ("Ground", m_Grounded);
 	}
 	
 	private void Flip()

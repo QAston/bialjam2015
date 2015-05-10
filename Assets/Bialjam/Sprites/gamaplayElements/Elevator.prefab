@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21252560}
   - 61: {fileID: 6149682}
   - 95: {fileID: 9587248}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
