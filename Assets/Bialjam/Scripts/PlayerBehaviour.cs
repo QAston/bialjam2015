@@ -47,7 +47,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		var camera = GameObject.Find ("PlayerCamera");
 		var ghostMask = LayerMask.GetMask ("Ghost Level", "Ghost Background", "Ghost Player");
-		var aliveMask = LayerMask.GetMask ("Alive Level", "Alive Background", "Alive Player");
+		var aliveMask = LayerMask.GetMask ("Alive Level", "Alive Background");
 		if (camera != null) {
 
 			var camComponent = camera.GetComponent<Camera>();
@@ -62,7 +62,6 @@ public class PlayerBehaviour : MonoBehaviour {
 				camComponent.cullingMask &= ~aliveMask;
 				break;
 			}
-			Debug.Log(LayerMask.GetMask("GhostLevel", "GhostBackground", "GhostPlayer"));
 
 		}
 	}
