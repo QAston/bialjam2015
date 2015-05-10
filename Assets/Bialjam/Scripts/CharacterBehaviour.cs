@@ -99,7 +99,7 @@ public class CharacterBehaviour : MonoBehaviour {
 		if (GetType () == Type.NPC) {
 			var npc = this;
 			PlayerBehaviour p = PlayerBehaviour.GetForCharater(col.gameObject);
-			if (p != null)
+			if (p != null && npc.IsAlive)
 			{
 				var ghost = col.gameObject.GetComponent<CharacterBehaviour>();
 				if (ghost != null && ghost.GetType() == Type.GHOST)
