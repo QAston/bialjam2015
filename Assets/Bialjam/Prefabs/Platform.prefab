@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 477994}
   - 212: {fileID: 21224266}
   - 61: {fileID: 6122596}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493310}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 471094}
   - 212: {fileID: 21214688}
   - 61: {fileID: 6139614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 404800}
   - 212: {fileID: 21299456}
   - 61: {fileID: 6118300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.98999977, y: -.819999993, z: 15.25}
+  m_LocalPosition: {x: 8.92758751, y: 1.27142119, z: 15.25}
   m_LocalScale: {x: .400000006, y: .300000012, z: 1}
   m_Children:
   - {fileID: 471094}

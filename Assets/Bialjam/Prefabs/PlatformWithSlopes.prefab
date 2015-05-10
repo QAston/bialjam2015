@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 424910}
   - 212: {fileID: 21260248}
   - 61: {fileID: 6116060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 434042}
   - 212: {fileID: 21228326}
   - 61: {fileID: 6107164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 431938}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformWithSlopes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 418114}
   - 212: {fileID: 21228778}
   - 61: {fileID: 6159480}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SlopeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

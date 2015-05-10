@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5066834}
   - 61: {fileID: 6153060}
   - 114: {fileID: 11453624}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NpcCharacter
   m_TagString: NpcCharacter
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 431118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: -2065832391, guid: 0000000000000000d000000000000000, type: 0}
@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8782369a05f7b854eb57eb4d0c337aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAlive: 0
   m_MaxSpeed: 10
   m_JumpForce: 400
   m_CrouchSpeed: .360000014

@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21295490}
   - 61: {fileID: 6181694}
   - 114: {fileID: 11493428}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Exit
   m_TagString: Exit
   m_Icon: {fileID: 0}
